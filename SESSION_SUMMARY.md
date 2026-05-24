@@ -6,7 +6,7 @@
 
 ## Project Goal
 Build an automated stance adverbial detector to faciltate the manual semantic analysis process.
-Develop a toolkit that is grounded in linguistic theory and framework, as the available trained model detect stance according to polarity positive, negative, or neutral. 
+Develop a toolkit that is grounded in linguistic theory and framework, as the available trained models detect stance according to polarity positive, negative, or neutral. 
 ---
 
 ## Data
