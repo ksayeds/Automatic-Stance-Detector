@@ -113,7 +113,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 ## Saved Files
 ```
 /Users/khaled/Desktop/NLP/Stance detetctor/
-├── stance detector 2.ipynb        — experimental notebook
+├── stance detector 2.ipynb        — main pipeline notebook
 ├── models/deberta-stance/best/    — saved fine-tuned model
 ├── results/
 │   ├── BNC_pilot_results.json     — all metrics saved permanently
@@ -121,8 +121,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 │   ├── error_analysis.csv         — misclassified instances
 │   ├── manual_inspection.xlsx     — full test set with predictions
 │   └── figures/                   — all plots
-└── data/processed/  
-— main pipeline notebook           — cleaned CSV splits
+└── data/processed/                — cleaned CSV splits
 ```
 
 ---
