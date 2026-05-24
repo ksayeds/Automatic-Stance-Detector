@@ -61,7 +61,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 |---|---|
 | Accuracy | 0.890 |
 | Macro F1 | 0.667 |
-| Cohen's κ | **0.645 (substantial agreement)** |
+| Cohen's κ | **0.645 (substantial agreement between model predictions and manual gold-standard annotations; Landis & Koch, 1977)** |
 
 ### Per-Class Performance
 | Class | Precision | Recall | F1 | Support |
@@ -106,7 +106,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 ---
 
 ## Computational Findings Statement
-> *"Fine-tuned DeBERTa-v3 with appraisal-informed features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
+> *"Fine-tuned DeBERTa-v3 with evaluative context features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement between model predictions and manual gold-standard annotations; Landis & Koch, 1977) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
 
 ---
 
