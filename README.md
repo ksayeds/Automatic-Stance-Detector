@@ -101,4 +101,4 @@ Automatic-Stance-Detector/
 
 If you use this code, please cite:
 
-> A.S., Khaled. (2026). *Automatic Stance Adverbial Detector*. GitHub. https://github.com/ksayeds/Automatic-Stance-Detector
+> S.A., Khaled. (2026). *Automatic Stance Adverbial Detector*. GitHub. https://github.com/ksayeds/Automatic-Stance-Detector
