@@ -41,7 +41,7 @@ Fine-tuning DeBERTa-v3 to automatically detect and classify stance adverbials in
 
 ## Key Linguistic Insight
 
-Epistemic adverbials shift to Attitudinal function when followed by evaluative content words in the right context — based on appraisal theory (Martin & White 2005). An `<<EVALUATIVE>>` marker was injected into training text when such words were detected, improving Macro F1 by 18% over plain DeBERTa.
+Epistemic adverbials shift to Attitudinal function when followed by evaluative content words in the right context — based on the stance framework of Biber & Finegan (1988), Biber et al. (1999), and Biber (2006). An `<<EVALUATIVE>>` marker was injected into training text when such words were detected, improving Macro F1 by 18% over plain DeBERTa.
 
 ---
 
