@@ -1,8 +1,8 @@
 # Automatic Stance Adverbial Detector
 
-Fine-tuning DeBERTa-v3 to automatically detect and classify stance adverbials in English corpus data, incorporating appraisal-informed features (Martin & White 2005) and comparing results against manual gold-standard annotations.
+Fine-tuning DeBERTa-v3 to automatically detect and classify stance adverbials in English corpus data, comparing results against manual gold-standard annotations.
 
-**Framework:** Biber et al. (1999) + Martin & White (2005)  
+**Framework:** Biber & Finegan (1988), Biber et al. (1999), Biber (2006)  
 **Data:** BNC corpus — 8,242 manually annotated concordance lines (4 registers, 9 adverbs)  
 **Model:** `microsoft/deberta-v3-base`
 
@@ -14,7 +14,7 @@ Fine-tuning DeBERTa-v3 to automatically detect and classify stance adverbials in
 |------|----------|---------|
 | E | **Epistemic** — certainty/doubt | *certainly, probably, perhaps, clearly* |
 | A | **Attitudinal** — evaluation | *unfortunately, surprisingly, frankly* |
-| N | **Non-stance** — adverb without stance function | context-dependent |
+| N | **Non-stance** — Ambiguous cases | context-dependent |
 
 ---
 
@@ -90,15 +90,10 @@ Automatic-Stance-Detector/
 
 ---
 
-## Research Context
-
-Pilot study for PhD research proposal (Free University of Bozen-Bolzano, 2026). Bridges Biber et al. (1999) stance framework with Martin & White (2005) appraisal theory. Multilingual architecture designed for extension to MERLIN (Italian L2) and ZAEBUC (Arabic L2) learner corpora.
-
 **Key research questions:**
 1. Can transformers automatically detect stance adverbials in corpus data?
 2. What accuracy is achievable vs. manual annotation (Cohen's κ)?
 3. Which stance categories are most/least reliably detected?
-4. How does appraisal-informed feature engineering improve classification?
 
 ---
 
@@ -106,4 +101,4 @@ Pilot study for PhD research proposal (Free University of Bozen-Bolzano, 2026). 
 
 If you use this code, please cite:
 
-> Ahmed, K. (2026). *Automatic Stance Adverbial Detector*. GitHub. https://github.com/ksayeds/Automatic-Stance-Detector
+> A.S., Khaled. (2026). *Automatic Stance Adverbial Detector*. GitHub. https://github.com/ksayeds/Automatic-Stance-Detector

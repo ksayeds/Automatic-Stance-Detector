@@ -5,14 +5,14 @@
 ---
 
 ## Project Goal
-Build an automated stance adverbial detector to strengthen PhD application to Free University of Bozen-Bolzano (deadline: June 10, 2026).
-
+Build an automated stance adverbial detector to faciltate the manual semantic analysis process.
+Develop a toolkit that is grounded in linguistic theory and framework, as the available trained model detect stance according to polarity positive, negative, or neutral. 
 ---
 
 ## Data
-- **4 Excel files** containing 8,242 manually annotated concordance lines from BNC corpus (MA thesis gold standard)
-- **Labels:** E = Epistemic, A = Attitudinal, N = Non-stance (Biber et al. 1999)
-- **Registers:** Academic Prose (AP) + Everyday Language (EL), 1994 + 2014
+- **4 Excel files** containing 8,242 manually annotated concordance lines from BNC corpora 1994 and 2014 (MA thesis gold standard)
+- **Labels:** E = Epistemic, A = Attitudinal, N = Non-stance (ambiguous cases) Biber and Finegan (1988, Biber et al. 1999, and Biber 2006)
+- **Registers:** Academic Prose (AP) + E-language (EL), 1994 + 2014
 - **Adverbs:** indeed, perhaps, clearly, actually, probably, unfortunately, maybe, really, definitely
 
 | File | Register | Instances |
@@ -25,9 +25,8 @@ Build an automated stance adverbial detector to strengthen PhD application to Fr
 
 ---
 
-## Key Linguistic Insight (by Khaled)
-Epistemic adverbs shift to Attitudinal function when followed by evaluative content words in the right context (appraisal theory, Martin & White 2005).
-
+## Key Linguistic research finding: 
+Epistemic adverbs shift to Attitudinal function when followed by evaluative content words in the right context. 
 Example:
 - *"perhaps **the most important** finding"* → Attitudinal (evaluative context)
 - *"perhaps the case"* → Epistemic (neutral context)
@@ -46,7 +45,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 ## Model Development — Results Progression
 
-| Model | Accuracy | Macro F1 | Cohen's κ | Errors/500 |
+| Model | Accuracy | Macro F1 | Cohen's κ | Error rate|
 |---|---|---|---|---|
 | Lexicon Baseline | 0.746 | 0.296 | -0.011 | — |
 | mBERT (AP2014 only) | 0.852 | 0.511 | 0.277 | 74 |
@@ -83,7 +82,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 ---
 
-## Key Findings for PhD Proposal
+## Key Findings:
 
 1. **Lexical identity alone is insufficient** — same adverb (*perhaps*, *indeed*, *clearly*) realizes different stance functions depending on context. Lexicon baseline F1=0.296 vs mBERT F1=0.511.
 
@@ -93,7 +92,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 4. **Capitalized forms easier** — sentence-initial position (Clearly, Probably) = 0% error rate, strong positional stance cue.
 
-5. **Remaining errors are linguistically motivated** — errors cluster at genuine Epistemic/Attitudinal boundaries, reflecting theoretical fuzziness in Biber et al. (1999) itself. Even expert annotators would disagree on these cases.
+5. **Remaining errors are linguistically motivated** — errors cluster at genuine Epistemic/Attitudinal boundaries.
 
 ---
 
@@ -106,15 +105,14 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 ---
 
-## PhD Proposal Statement
-> *"Fine-tuned DeBERTa-v3 with appraisal-informed features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach — flagging Martin & White (2005) appraisal vocabulary in the right context of stance adverbials — improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
+## Computational Findings Statement
+> *"Fine-tuned DeBERTa-v3 with appraisal-informed features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach — improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
 
 ---
 
 ## Saved Files
 ```
 /Users/khaled/Desktop/NLP/Stance detetctor/
-├── stance_detector.ipynb          — main pipeline notebook
 ├── stance detector 2.ipynb        — experimental notebook
 ├── models/deberta-stance/best/    — saved fine-tuned model
 ├── results/
@@ -123,7 +121,8 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 │   ├── error_analysis.csv         — misclassified instances
 │   ├── manual_inspection.xlsx     — full test set with predictions
 │   └── figures/                   — all plots
-└── data/processed/                — cleaned CSV splits
+└── data/processed/  
+— main pipeline notebook           — cleaned CSV splits
 ```
 
 ---
@@ -137,15 +136,3 @@ tokenizer = AutoTokenizer.from_pretrained('models/deberta-stance/best', use_fast
 ```
 
 ---
-
-## Next Steps (PhD Research)
-1. Apply model to **MERLIN corpus** (Italian L2) — requires XLM-RoBERTa (multilingual)
-2. Apply model to **ZAEBUC corpus** (Arabic L2) — requires multilingual model
-3. Compare stance patterns: L1 native English vs L2 Italian/Arabic learners
-4. Extend evaluative marker approach to Italian/Arabic appraisal vocabulary
-
----
-
-## PhD Applications
-- **Primary:** Free University of Bozen-Bolzano (Prof. Andrea Abel) — deadline June 10, 2026
-- **Noted:** MultiLAwa Doctoral Network (14 positions, deadline July 8, 2026) — requires B2 German, currently not eligible
