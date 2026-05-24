@@ -84,7 +84,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 ## Key Findings:
 
-1. **Lexical identity alone is insufficient** — same adverb (*perhaps*, *indeed*, *clearly*) realizes different stance functions depending on context. Lexicon baseline F1=0.296 vs mBERT F1=0.511.
+1. **Lexical identity alone is insufficient** — same adverb (*perhaps*, *indeed*, *clearly*) realizes different stance functions depending on context. Lexicon baseline F1=0.296 vs DeBERTa F1=0.667.
 
 2. **Appraisal-informed features improve classification** — adding evaluative context markers (Martin & White 2005) improved Macro F1 by 18% over plain DeBERTa.
 
@@ -106,7 +106,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 ---
 
 ## Computational Findings Statement
-> *"Fine-tuned DeBERTa-v3 with appraisal-informed features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach — improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
+> *"Fine-tuned DeBERTa-v3 with appraisal-informed features achieved Macro F1=0.667 and Cohen's κ=0.645 (substantial agreement) across 8,242 annotated instances spanning two registers and two time periods, outperforming the lexicon baseline by 74%. The evaluative marker approach improved classification at the theoretically challenging Epistemic/Attitudinal boundary, demonstrating that linguistic theory directly enhances computational performance."*
 
 ---
 
