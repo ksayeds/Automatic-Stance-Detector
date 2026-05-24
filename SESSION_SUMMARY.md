@@ -86,7 +86,7 @@ This insight was implemented as an `<<EVALUATIVE>>` marker injected into trainin
 
 1. **Lexical identity alone is insufficient** — same adverb (*perhaps*, *indeed*, *clearly*) realizes different stance functions depending on context. Lexicon baseline F1=0.296 vs DeBERTa F1=0.667.
 
-2. **Appraisal-informed features improve classification** — adding evaluative context markers (Martin & White 2005) improved Macro F1 by 18% over plain DeBERTa.
+2. **Evaluative-marker highlight improves classification** — highlighting that evaluative context markerkers convert the epistemic stance into attitudinal improved Macro F1 by 18% over plain DeBERTa.
 
 3. **Adverb-specific difficulty** — *probably* (3% error) vs *indeed* (55% error) — adverbs with narrower functional range are easier to classify.
 
