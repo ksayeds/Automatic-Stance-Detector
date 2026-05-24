@@ -54,7 +54,8 @@ Epistemic adverbials shift to Attitudinal function when followed by evaluative c
 | Appendix3.EL1994.xlsx | Everyday Language | 1994 | 742 |
 | Appendix4.EL2014.xlsx | Everyday Language | 2014 | 2,500 |
 
-*Data from BNC (British National Corpus). Available under BNC license at www.natcorp.ox.ac.uk*
+> **⚠️ Copyright Notice**  
+> The concordance data used in this project are derived from the **British National Corpus (BNC)**, which is &copy; Oxford University Press. The data files (Appendix1–4.xlsx) are **not included in this repository** and cannot be redistributed. To replicate this study, you must obtain access to the BNC through the official license at [www.natcorp.ox.ac.uk](http://www.natcorp.ox.ac.uk). The manual annotations are part of the author's MA thesis (Vilnius University, 2026).
 
 ---
 
